@@ -1,0 +1,50 @@
+<h1><%= gettext "User Profile" %></h1>
+<span><a href="<%=Routes.profile_path(@conn, :go_edit_username) %>"><%= gettext "Edit Username" %></a> |</span>
+<span><a href="<%=Routes.profile_path(@conn, :go_edit_password) %>"><%= gettext "Edit Password" %></a></span>
+
+<ul>
+
+  <li>
+    <strong><%= gettext "Username"%>:</strong>
+    <%= @user.username %>
+  </li>
+
+  <li>
+    <strong><%= gettext "Role"%>:</strong>
+    <%= @user.role %>
+  </li>
+
+</ul>
+
+<span><a href="<%=Routes.profile_path(@conn, :profile_index) %>"><%= gettext "Back" %></a></span>
+
+ <section id="api" class="column">
+        <h2>API</h2>
+        <%= form_for @changeset, Routes.profile_path(@conn, :generate_key), fn f -> %>
+
+<%= label f, :name, "API key name" %>
+<%= text_input f, :name %>
+<%= error_tag f, :name %>
+        <div>
+    <%= submit "Save" %>
+</div>
+<% end %>
+
+        
+    </tbody>
+    <%= for api <- @user.apis do %>
+        <table>
+            <tr>
+                <th><%= gettext "name" %></th>
+                
+            </tr>
+            <tr>
+                <td><%= api.name %></td>
+                <td><%= api.id %></td>
+                <td>
+                <span><%= link "Show", to: Routes.profile_path(@conn, :show_key, api.id) %></span> |
+                <span><%= link "Delete", to: Routes.profile_path(@conn, :delete_key, api), method: :delete, data: [confirm: "Are you sure?"] %></span>                </td>
+            </tr>
+        </table>
+        <%end%>
+    </section>

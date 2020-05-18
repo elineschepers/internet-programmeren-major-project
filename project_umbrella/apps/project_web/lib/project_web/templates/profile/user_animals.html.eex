@@ -1,0 +1,28 @@
+<h1> <%= gettext "Listing animals" %></h1>
+<p id=currenttime></p>
+<table>
+    <thead>
+        <tr>
+            <th ><%= gettext "name" %></th>
+            <th><%= gettext "birtday" %></th>
+            <th><%= gettext "user id" %></th>
+            <th><%= gettext "type of animal" %></th>
+        </tr>
+    </thead>
+    <tbody>
+        <%= for animal <- @user.animals do %>
+        <tr>
+            <td><%= animal.name %></td>
+            <td><%= animal.birthday %></td>
+            <td><%= animal.user_id %></td>
+           <td><%= animal.animal %></td>
+
+            <td>
+            </td>
+         
+        </tr>
+         <% end %>
+    </tbody>
+</table>
+
+<script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/time.js") %>"></script>

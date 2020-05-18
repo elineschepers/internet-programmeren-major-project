@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%= assigns[:page_title] || "keeping track of animals app" %></title>
+    <link rel="stylesheet" href="<%= Routes.static_path(@conn, "/css/app.css") %>"/>
+    <%= csrf_meta_tag() %>
+  </head>
+  <body>
+    <header>
+    
+      <section class="container">
+      <nav role="languages">
+        <ul>
+           <li><%= new_locale @conn, :en, "English" %></li>
+        <li><%= new_locale @conn, :nl, "Nederlands" %></li>
+          
+          
+        </ul>
+      </nav>
+            <nav role="navigation">
+        <ul>
+          <li><a href="<%= Routes.profile_path(@conn, :profile_index) %>"><%= gettext "home" %></a></li>
+          <li><a href="<%= Routes.user_path(@conn, :index) %>"><%= gettext "User Management" %></a></li>
+          <li><a href="<%= Routes.session_path(@conn, :new) %>"><%= gettext "Login" %></a></li>
+          <li><a href="<%= Routes.session_path(@conn, :logout) %>"><%= gettext "Logout" %></a></li>
+          <li><a href="<%= Routes.profile_path(@conn, :profile) %>"><%= gettext "Profile" %></a></li>
+
+          
+          
+          
+        </ul>
+      </nav>
+        <h1><%= gettext "Animal Listener" %></h1>
+      </section>
+    </header>
+    <main role="main" class="container">
+      <p class="alert alert-info" role="alert"><%= get_flash(@conn, :info) %></p>
+      <p class="alert alert-danger" role="alert"><%= get_flash(@conn, :error) %></p>
+      <%= render @view_module, @view_template, assigns %>
+    </main>
+    <script type="text/javascript" src="<%= Routes.static_path(@conn, "/js/app.js") %>"></script>
+  </body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\project_umbrella",
+    "\\project_umbrella\\apps",
+    "\\project_umbrella\\apps\\project",
+    "\\project_umbrella\\apps\\project\\lib",
+    "\\project_umbrella\\apps\\project\\lib\\project",
+    "\\project_umbrella\\apps\\project\\priv",
+    "\\project_umbrella\\apps\\project\\priv\\repo",
+    "\\project_umbrella\\apps\\project\\priv\\repo\\migrations",
+    "\\project_umbrella\\apps\\project\\test"
+  ],
+  "SelectedNode": "\\project_umbrella\\apps\\project\\lib\\project\\animal.ex",
+  "PreviewInSolutionExplorer": false
+}

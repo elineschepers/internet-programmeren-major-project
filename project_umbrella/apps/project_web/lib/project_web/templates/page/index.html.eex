@@ -1,0 +1,17 @@
+<section class="phx-hero">
+  <h1> <%= gettext "Project Internet Programming Major" %> </h1>
+  <p>Eline Schepers - r0745170 - 2019-2020</p>
+</section>
+
+
+
+
+
+<section class="row">
+
+ <h1> <%= gettext "this page is for: " %> <%= @role %>
+  <br>
+  <%= gettext "user accounts with password" %>: "t"
+  <br>
+  <%= gettext "user - manager - admin" %>
+</section>

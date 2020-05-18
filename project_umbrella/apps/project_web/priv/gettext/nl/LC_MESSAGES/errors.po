@@ -1,0 +1,94 @@
+## "msgid"s in this file come from POT (.pot) files.
+##
+## Do not add, change, or remove "msgid"s manually here as
+## they're tied to the ones in the corresponding POT file
+## (with the same domain).
+##
+## Use "mix gettext.extract --merge" or "mix gettext.merge"
+## to merge POT files into PO files.
+msgid ""
+msgstr ""
+"Language: nl\n"
+"Plural-Forms: nplurals=2\n"
+
+msgid "can't be blank"
+msgstr "kan niet leeg zijn"
+
+msgid "has already been taken"
+msgstr "is al in gebruik"
+
+msgid "is invalid"
+msgstr "is niet toegestaan"
+
+msgid "must be accepted"
+msgstr "moet toegestaan worden"
+
+msgid "has invalid format"
+msgstr "heeft niet het juiste datatype"
+
+msgid "has an invalid entry"
+msgstr "heeft niet de juiste data"
+
+msgid "is reserved"
+msgstr "is voorbehouden"
+
+msgid "does not match confirmation"
+msgstr "komt niet overeen met het bovenstaande"
+
+msgid "is still associated with this entry"
+msgstr "is nog steeds in connectie met een ingang"
+
+msgid "are still associated with this entry"
+msgstr "zijn nog steeds in connectie met een ingang"
+
+msgid "should be %{count} character(s)"
+msgid_plural "should be %{count} character(s)"
+msgstr[0] "zou %{count} karakter moeten hebben"
+msgstr[1] "zou %{count} karakters moeten hebben"
+
+msgid "should have %{count} item(s)"
+msgid_plural "should have %{count} item(s)"
+msgstr[0] "zou %{count} objecten moeten hebben"
+msgstr[1] "zou %{count} objecten moeten hebben"
+
+msgid "should be at least %{count} character(s)"
+msgid_plural "should be at least %{count} character(s)"
+msgstr[0] "zou minstens %{count} karakter moeten hebben"
+msgstr[1] "zou minstens %{count} karakters moeten hebben"
+
+msgid "should have at least %{count} item(s)"
+msgid_plural "should have at least %{count} item(s)"
+msgstr[0] "moet minstens %{count} item(s) bevatten"
+msgstr[1] "moet minstens %{count} item(s) bevatten"
+
+msgid "should be at most %{count} character(s)"
+msgid_plural "should be at most %{count} character(s)"
+msgstr[0] "het zou maximaal %{count} karakter(r) lang mogen zijn"
+msgstr[1] "het zou maximaal %{count} karakter(r) lang mogen zijn"
+
+msgid "should have at most %{count} item(s)"
+msgid_plural "should have at most %{count} item(s)"
+msgstr[0] "het zou maximaal %{count} item(s) mogen bevatten"
+msgstr[1] ""
+
+msgid "must be less than %{number}"
+msgstr "moet minder zijn dan %{number}"
+
+msgid "must be greater than %{number}"
+msgstr "moet groter zijn dan %{number}"
+
+msgid "must be less than or equal to %{number}"
+msgstr "moet kleiner of gelijk zijn aan %{number}"
+
+msgid "must be greater than or equal to %{number}"
+msgstr "moet groter of gelijk zijn aan %{number}"
+
+msgid "must be equal to %{number}"
+msgstr "moet gelijk zijn aan %{number}"
+
+#, elixir-format
+#: lib/project_web/guardian/error_handler.ex:13
+#: lib/project_web/plugs/api_plug.ex:32 lib/project_web/plugs/authorization_plug.ex:17
+#: lib/project_web/plugs/authorization_plug.ex:17
+msgid "Unauthorized access"
+msgstr "Geen toegang"
